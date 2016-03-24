@@ -102,7 +102,7 @@ class Libravatar
 
         r = resources.max_by { |r| r.weight == 0 ? 0 : rand ** (weight_sum / r.weight) }
 
-        return [r.target, r.port]
+        return sanitize_srv_lookup(r.target, r.port)
       end
     end
 
