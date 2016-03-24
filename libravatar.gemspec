@@ -35,9 +35,9 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.3'
 
   s.add_development_dependency 'shoulda', '> 1.2.3'
+  s.add_development_dependency 'jeweler'
 
   s.add_development_dependency 'bundler', '~> 1.6'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rake-compiler'
 end
 
