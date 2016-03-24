@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.name = %q{libravatar}
   s.version = "1.2.0"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kang-min Liu"]
   s.date = %q{2011-07-24}
   s.description = %q{libravatar.org provides avatar image hosting (like gravatar.com). Their users may associate avatar images with email or openid. This rubygem can be used to generate libravatar avatar image URL}
@@ -33,16 +32,12 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.6.1}
   s.summary = %q{Avatar URL Generation wih libravatar.org}
 
-  if s.respond_to? :specification_version then
-    s.specification_version = 3
+  s.required_ruby_version = '>= 1.9.3'
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<shoulda>, ["> 1.2.3"])
-    else
-      s.add_dependency(%q<shoulda>, ["> 1.2.3"])
-    end
-  else
-    s.add_dependency(%q<shoulda>, ["> 1.2.3"])
-  end
+  s.add_development_dependency 'shoulda', '> 1.2.3'
+
+  s.add_development_dependency 'bundler', '~> 1.6'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake-compiler'
 end
 
