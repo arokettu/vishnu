@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
 
   spec.authors          = ['Anton Smirnov', 'Kang-min Liu']
   spec.email            = 'sandfox@sandfox.me'
-  spec.summary          = 'Avatar URL Generation wih libravatar.org'
-  spec.description      = 'libravatar.org provides avatar image hosting (like gravatar.com). Their users may associate avatar images with email or openid. This rubygem can be used to generate libravatar avatar image URL'
+  spec.summary          = 'Avatar URL Generation with libravatar.org'
+  spec.description      = 'Libravatar provides avatar image hosting (like gravatar.com). Their users may associate avatar images with email or openid. This rubygem can be used to generate Libravatar image URL'
   spec.homepage         = 'https://github.com/sandfoxme/vishnu'
   spec.license          = 'MIT'
 
