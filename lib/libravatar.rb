@@ -1,3 +1,3 @@
-require './vishnu'
+require 'vishnu'
 
 class Libravatar < Vishnu; end
