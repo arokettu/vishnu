@@ -2,7 +2,35 @@ require 'spec_helper'
 
 RSpec.describe Libravatar do
   describe 'Gets urls' do
+    before(:each) do
+      dns = double('Resolv::DNS')
+      allow(Resolv::DNS).to receive(:open).and_yield(dns)
+      allow(dns).to receive(:getresources) do |host, type|
+        expect(type).to eq(Resolv::DNS::Resource::IN::SRV)
+
+        case host.downcase
+          when '_avatars._tcp.federated.com'
+            [
+                Resolv::DNS::Resource::IN::SRV.new(0, 5, 80, 'avatars.federated.com'),
+                Resolv::DNS::Resource::IN::SRV.new(5, 5, 80, 'not-in-priority.federated.com'),
+            ]
+          when '_avatars-sec._tcp.federated.com'
+            [
+                Resolv::DNS::Resource::IN::SRV.new(5, 5, 443, 'not-in-priority.federated.com'),
+                Resolv::DNS::Resource::IN::SRV.new(0, 5, 443, 'avatars.federated.com'),
+            ]
+          when '_avatars._tcp.custom-federated.com'
+            [Resolv::DNS::Resource::IN::SRV.new(0, 5, 8080, 'avatars.custom-federated.com')]
+          when '_avatars-sec._tcp.custom-federated.com'
+            [Resolv::DNS::Resource::IN::SRV.new(0, 5, 8043, 'avatars.custom-federated.com')]
+          else
+            []
+        end
+      end
+    end
+
     it 'gets url for email' do
+      # non-federated
       expect(Libravatar.new(email: 'user@example.com').url).to                                            eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
       expect(Libravatar.new(email: 'user@example.com').to_s).to                                           eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
       expect(Libravatar.new(email: 'USER@ExAmPlE.CoM').url).to                                            eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
@@ -10,6 +38,12 @@ RSpec.describe Libravatar do
       expect(Libravatar.new(email: 'user@example.com', https: false).url).to                              eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
       expect(Libravatar.new(email: 'USER@ExAmPlE.CoM', default: 'http://example.com/avatar.png').url).to  eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?d=http://example.com/avatar.png')
       expect(Libravatar.new(email: 'USER@ExAmPlE.CoM', size: 512, default: 'mm').url).to                  eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?s=512&d=mm')
+
+      # federated
+      expect(Libravatar.new(email: 'user@federated.com').url).to                                          eq('http://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
+      expect(Libravatar.new(email: 'user@feDeRaTed.cOm', https: true).url).to                             eq('https://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
+      expect(Libravatar.new(email: 'USER@cuStOm-feDerated.COM').url).to                                   eq('http://avatars.custom-federated.com:8080/avatar/8df8704e4b556e0684f7c38accdaf517')
+      expect(Libravatar.new(email: 'user@custom-federated.com', https: true).url).to                      eq('https://avatars.custom-federated.com:8043/avatar/8df8704e4b556e0684f7c38accdaf517')
     end
 
     it 'gets url for openid' do
@@ -33,6 +67,12 @@ RSpec.describe Libravatar do
 
       avatar = Libravatar.new(openid: 'http://example.com')
       expect(avatar.url).to eq('http://cdn.libravatar.org/avatar/2a1b402420ef46577471cdc7409b0fa2c6a204db316e59ade2d805435489a067')
+
+      avatar = Libravatar.new(openid: 'http://federated.com/id/user')
+      expect(avatar.url).to eq('http://avatars.federated.com/avatar/50ef67971fecacf62abe7f9a002aaf6a26ff5882229a51899439dd4c7ccb9ddd')
+
+      avatar = Libravatar.new(openid: 'http://custom-federated.com/id/user')
+      expect(avatar.url).to eq('http://avatars.custom-federated.com:8080/avatar/e2014cf33d71fbf29f6976eab7f9569e7c9eae358cca0ac5b4aa536400a1c9fe')
     end
   end
 
@@ -45,12 +85,6 @@ RSpec.describe Libravatar do
       expect(x.send(:normalize_openid, 'https://example.com/id/bob')).to  eq('https://example.com/id/bob')
       expect(x.send(:normalize_openid, 'https://eXamPlE.cOm/ID/BOB/')).to eq('https://example.com/ID/BOB/')
     end
-
-    # TODO: mock resolver and move test to Gets Url
-    # it 'returns federated avatar' do
-    #   avatar = Libravatar.new(:email => 'invalid@catalyst.net.nz')
-    #   expect(avatar.to_s).to eq('http://static.avatars.catalyst.net.nz/avatar/f924d1e9f2c10ee9efa7acdd16484c2f')
-    # end
 
     it 'sanitizes SRV lookup result' do
       avatar = Libravatar.new

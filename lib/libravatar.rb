@@ -102,7 +102,7 @@ class Libravatar
 
         r = resources.max_by { |r| r.weight == 0 ? 0 : rand ** (weight_sum / r.weight) }
 
-        return sanitize_srv_lookup(r.target, r.port)
+        return sanitize_srv_lookup(r.target.to_s, r.port)
       end
     end
 
@@ -133,7 +133,7 @@ class Libravatar
     # Normalize an openid URL following the description on libravatar.org
     def normalize_openid(url)
       parsed_url = URI.parse(url)
-      parsed_url.host.downcase!
+      parsed_url.host   = parsed_url.host.downcase
       parsed_url.scheme = parsed_url.scheme.downcase
       if parsed_url.path == '' && parsed_url.fragment == nil
         parsed_url.path = '/'
