@@ -78,12 +78,12 @@ RSpec.describe Libravatar do
 
   describe 'Works correctly inside' do
     it 'sanitizes openid' do
-      x = Libravatar.new
+      avatar = Libravatar.new
 
-      expect(x.send(:normalize_openid, 'HTTP://EXAMPLE.COM/id/Bob')).to   eq('http://example.com/id/Bob')
-      expect(x.send(:normalize_openid, 'HTTP://EXAMPLE.COM')).to          eq('http://example.com/')
-      expect(x.send(:normalize_openid, 'https://example.com/id/bob')).to  eq('https://example.com/id/bob')
-      expect(x.send(:normalize_openid, 'https://eXamPlE.cOm/ID/BOB/')).to eq('https://example.com/ID/BOB/')
+      expect(avatar.send(:normalize_openid, 'HTTP://EXAMPLE.COM/id/Bob')).to   eq('http://example.com/id/Bob')
+      expect(avatar.send(:normalize_openid, 'HTTP://EXAMPLE.COM')).to          eq('http://example.com/')
+      expect(avatar.send(:normalize_openid, 'https://example.com/id/bob')).to  eq('https://example.com/id/bob')
+      expect(avatar.send(:normalize_openid, 'https://eXamPlE.cOm/ID/BOB/')).to eq('https://example.com/ID/BOB/')
     end
 
     it 'sanitizes SRV lookup result' do
