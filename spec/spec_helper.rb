@@ -1,4 +1,4 @@
 require 'simplecov'
 SimpleCov.start
 
-require_relative '../lib/libravatar'
+require_relative '../lib/vishnu'
