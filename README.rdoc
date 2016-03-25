@@ -1,5 +1,7 @@
 = libravatar
 
+{<img src="https://travis-ci.org/sandfoxme/libravatar.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/sandfoxme/libravatar]
+
 http://libravatar.org is an avatar service to let their users associate avatar images
 with their emails or openids. This rubygem generates their avatar URL.
 
