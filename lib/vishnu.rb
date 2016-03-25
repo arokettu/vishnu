@@ -15,7 +15,7 @@ require 'digest/sha2'
 require 'uri'
 require 'resolv'
 
-class Libravatar
+class Vishnu
   attr_accessor :email, :openid, :size, :default, :https
 
   # The options should contain :email or :openid values.  If both are
