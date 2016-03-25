@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in journald-logger.gemspec
+# Specify your gem's dependencies in vishnu.gemspec
 gemspec

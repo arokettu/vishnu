@@ -10,6 +10,8 @@
 # Contributors:: https://github.com/gugod/libravatar/contributors
 #
 
+require_relative 'vishnu/version'
+
 require 'digest/md5'
 require 'digest/sha2'
 require 'uri'
