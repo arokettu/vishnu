@@ -34,9 +34,11 @@ Vishnu.new(email:  'someone@example.com').to_s  # use to_s alias
 # use all options
 avatar = Vishnu.new(
     email:      'someone@example.com',  # email
-    openid:     'https://example.com/', # OpenID URL. If both email and url are set, you will get avatar for the email
+    openid:     'https://example.com/', # OpenID URL. If both email and url are set,
+                                        # you will get avatar for the email
     size:       150,                    # avatar size, 1-512; default is 80
-    default:    'identicon',            # '404', 'mm', 'identicon', 'monsterid', 'wavatar', 'retro' or url to your default
+    default:    'identicon',            # '404', 'mm', 'identicon', 'monsterid', 'wavatar', 'retro'
+                                        # or url to your default
     https:      true,                   # use secure url or not; default is false
 )
 
