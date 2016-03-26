@@ -58,7 +58,7 @@ As a fork, vishnu is mostly compatible to the [libravatar](https://rubygems.org/
 
 Major differences in 2.0 are:
  
-*   ruby < 2.0.0 are no longer supported
+*   ruby < 2.0.0 is no longer supported
 *   methods ```get_target_domain```, ```srv_lookup```, ```get_base_url```
 (basically everything except `to_s` and attribute setters / getters) 
 are now private
