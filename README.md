@@ -64,7 +64,7 @@ Major differences in 2.0 are:
 are now private
     
 If you for some reason depend on these features, use ```vishnu 1.2.1``` 
-which is basically rebranded bugfix for ```libravatar 1.2.0```.
+which is basically a rebranded bugfix for ```libravatar 1.2.0```.
 
 ## License
 
