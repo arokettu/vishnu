@@ -1,27 +1,69 @@
-# libravatar
+# Vishnu
 
+[![Gem Version](https://badge.fury.io/rb/vishnu.svg)](http://badge.fury.io/rb/vishnu)
+[![Reference Status](https://www.versioneye.com/ruby/vishnu/reference_badge.svg)](https://www.versioneye.com/ruby/vishnu/references)
 [![Build Status](https://travis-ci.org/sandfoxme/vishnu.svg?branch=master)](https://travis-ci.org/sandfoxme/vishnu)
 
-http://libravatar.org is an avatar service to let their users associate avatar
-images with their emails or openids. This rubygem generates their avatar URL.
+Vishnu is a simple library to use Libravatar avatars in your ruby app. 
 
-## Contributing to libravatar
+[Libravatar](https://libravatar.org/) is an avatar service to let their 
+users associate avatar images with their emails or openids. This rubygem 
+generates their avatar URL.
 
-*   Check out the latest master to make sure the feature hasn't been
-    implemented or the bug hasn't been fixed yet
-*   Check out the issue tracker to make sure someone already hasn't requested
-    it and/or contributed it
-*   Fork the project
-*   Start a feature/bugfix branch
-*   Commit and push until you are happy with your contribution
-*   Make sure to add tests for it. This is important so I don't break it in a
-    future version unintentionally.
-*   Please try not to mess with the Rakefile, version, or history. If you want
-    to have your own version, or is otherwise necessary, that is fine, but
-    please isolate to its own commit so I can cherry-pick around it.
+## Installation
 
+Add the following line to your ```Gemfile```:
+    
+```ruby
+gem 'vishnu'
+```
 
-## Copyright
+Or if you want to register ```Libravatar``` alias, then:
 
-Copyright (c) 2011 Kang-min Liu. See LICENSE.txt for further details.
+```ruby
+gem 'vishnu', require: 'libravatar'
+```
 
+## Usage
+
+```ruby
+Vishnu.new(email:  'someone@example.com').url   # get avatar for email
+Vishnu.new(openid: 'https://example.com').url   # get avatar for OpenID URL
+Vishnu.new(email:  'someone@example.com').to_s  # use to_s alias
+
+# use all options
+avatar = Vishnu.new(
+    email:      'someone@example.com',  # email
+    openid:     'https://example.com/', # OpenID URL. If both email and url are set, you will get avatar for the email
+    size:       150,                    # avatar size, 1-512; default is 80
+    default:    'identicon',            # '404', 'mm', 'identicon', 'monsterid', 'wavatar', 'retro' or url to your default
+    https:      true,                   # use secure url or not; default is false
+)
+
+avatar.size = 40    # all params are also available as attributes
+
+avatar.url          # get avatar url new style
+avatar.to_s         # and old style
+# => "https://seccdn.libravatar.org/avatar/16d113840f999444259f73bac9ab8b10?s=40&d=identicon"
+
+require 'libravatar' # register an alias if you didn't add require: 'libravatar' to your Gemfile
+Libravatar.new(email: 'someone@example.com').to_s   # libravatar gem style 
+```
+
+## libravatar gem compatibility
+
+As a fork, vishnu is mostly compatible to the [libravatar](https://rubygems.org/gems/libravatar) v1.2.0 gem.
+
+Major differences in 2.0 are:
+ 
+*   ruby < 2.0.0 are no longer supported
+*   methods ```get_target_domain```, ```srv_lookup```, ```get_base_url```
+(basically everything except `to_s` and attribute setters / getters) 
+are now private
+    
+If you for some reason depend on these features, use ```vishnu 1.2.1``` 
+which is basically rebranded bugfix for ```libravatar 1.2.0```.
+
+## License
+
+Licensed under the MIT License. See ```LICENSE.txt``` for further details.

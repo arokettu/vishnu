@@ -1,13 +1,14 @@
 #
-# The Libravatar class generates the avatar URL provided by the libravatar
-# web service at http://www.libravatar.org
+# The Vishnu class generates the avatar URL provided by the libravatar
+# web service at https://www.libravatar.org
 #
 # Users may associate their avatar images with multiple OpenIDs and Emails.
 #  
-# Author:: Kang-min Liu (http://gugod.org)
+# Original Author:: Kang-min Liu (http://gugod.org/)
+# Fork Author:: Anton Smirnov (https://sandfox.me/)
 # Copyright:: Copyright (c) 2011 Kang-min Liu
 # License:: MIT
-# Contributors:: https://github.com/gugod/libravatar/contributors
+# Contributors:: https://github.com/sandfoxme/vishnu/graphs/contributors
 #
 
 require_relative 'vishnu/version'
@@ -22,7 +23,7 @@ class Vishnu
 
   # The options should contain :email or :openid values.  If both are
   # given, email will be used. The value of openid and email will be
-  # normalized by the rule described in http://www.libravatar.org/api
+  # normalized by the rule described in https://wiki.libravatar.org/api/
   #
   # List of option keys:
   #
