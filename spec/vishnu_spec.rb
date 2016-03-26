@@ -29,24 +29,37 @@ RSpec.describe Vishnu do
       end
     end
 
-    it 'gets url for email' do
+    it 'gets url for non federated email' do
       # non-federated
-      expect(Vishnu.new(email: 'user@example.com').url).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
-      expect(Vishnu.new(email: 'user@example.com').to_s).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
-      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM').url).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
-      expect(Vishnu.new(email: 'user@example.com', https: true).url).to eq('https://seccdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
-      expect(Vishnu.new(email: 'user@example.com', https: false).url).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
-      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM', default: 'http://example.com/avatar.png').url).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?d=http://example.com/avatar.png')
-      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM', size: 512, default: 'mm').url).to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?s=512&d=mm')
-
-      # federated
-      expect(Vishnu.new(email: 'user@federated.com').url).to eq('http://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
-      expect(Vishnu.new(email: 'user@feDeRaTed.cOm', https: true).url).to eq('https://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
-      expect(Vishnu.new(email: 'USER@cuStOm-feDerated.COM').url).to eq('http://avatars.custom-federated.com:8080/avatar/8df8704e4b556e0684f7c38accdaf517')
-      expect(Vishnu.new(email: 'user@custom-federated.com', https: true).url).to eq('https://avatars.custom-federated.com:8043/avatar/8df8704e4b556e0684f7c38accdaf517')
+      expect(Vishnu.new(email: 'user@example.com').url).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
+      expect(Vishnu.new(email: 'user@example.com').to_s).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
+      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM').url).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
+      expect(Vishnu.new(email: 'user@example.com', https: true).url).
+          to eq('https://seccdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
+      expect(Vishnu.new(email: 'user@example.com', https: false).url).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af')
+      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM', default: 'http://example.com/avatar.png').url).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?d=http://example.com/avatar.png')
+      expect(Vishnu.new(email: 'USER@ExAmPlE.CoM', size: 512, default: 'mm').url).
+          to eq('http://cdn.libravatar.org/avatar/b58996c504c5638798eb6b511e6f49af?s=512&d=mm')
     end
 
-    it 'gets url for openid' do
+    it 'gets url for federated email' do
+      # federated
+      expect(Vishnu.new(email: 'user@federated.com').url).
+          to eq('http://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
+      expect(Vishnu.new(email: 'user@feDeRaTed.cOm', https: true).url).
+          to eq('https://avatars.federated.com/avatar/d69b469ded547b3ddef720a70c186322')
+      expect(Vishnu.new(email: 'USER@cuStOm-feDerated.COM').url).
+          to eq('http://avatars.custom-federated.com:8080/avatar/8df8704e4b556e0684f7c38accdaf517')
+      expect(Vishnu.new(email: 'user@custom-federated.com', https: true).url).
+          to eq('https://avatars.custom-federated.com:8043/avatar/8df8704e4b556e0684f7c38accdaf517')
+    end
+
+    it 'gets url for non federated openid' do
       avatar = Vishnu.new(openid: 'http://example.com/id/Bob')
       expect(avatar.url).to eq('http://cdn.libravatar.org/avatar/80cd0679bb52beac4d5d388c163016dbc5d3f30c262a4f539564236ca9d49ccd')
 
@@ -67,7 +80,9 @@ RSpec.describe Vishnu do
 
       avatar = Vishnu.new(openid: 'http://example.com')
       expect(avatar.url).to eq('http://cdn.libravatar.org/avatar/2a1b402420ef46577471cdc7409b0fa2c6a204db316e59ade2d805435489a067')
+    end
 
+    it 'gets url for federated openid' do
       avatar = Vishnu.new(openid: 'http://federated.com/id/user')
       expect(avatar.url).to eq('http://avatars.federated.com/avatar/50ef67971fecacf62abe7f9a002aaf6a26ff5882229a51899439dd4c7ccb9ddd')
 
