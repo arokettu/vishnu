@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/vishnu.svg)](http://badge.fury.io/rb/vishnu)
 [![Reference Status](https://www.versioneye.com/ruby/vishnu/reference_badge.svg)](https://www.versioneye.com/ruby/vishnu/references)
 [![Build Status](https://travis-ci.org/sandfoxme/vishnu.svg?branch=master)](https://travis-ci.org/sandfoxme/vishnu)
+[![Code Climate](https://codeclimate.com/github/sandfoxme/vishnu/badges/gpa.svg)](https://codeclimate.com/github/sandfoxme/vishnu)
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app. 
 
