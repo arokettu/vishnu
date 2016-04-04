@@ -103,9 +103,9 @@ class Vishnu
 
         weight_sum = resources.inject(0) { |sum, r| sum + r.weight }.to_f
 
-        r = resources.max_by { |r| r.weight == 0 ? 0 : rand ** (weight_sum / r.weight) }
+        resource = resources.max_by { |r| r.weight == 0 ? 0 : rand ** (weight_sum / r.weight) }
 
-        return sanitize_srv_lookup(r.target.to_s, r.port)
+        return sanitize_srv_lookup(resource.target.to_s, resource.port)
       end
     end
 
