@@ -1,11 +1,10 @@
 # Vishnu
 
-[![Gem Version](https://badge.fury.io/rb/vishnu.svg)](http://badge.fury.io/rb/vishnu)
-[![Reference Status](https://www.versioneye.com/ruby/vishnu/reference_badge.svg)](https://www.versioneye.com/ruby/vishnu/references)
-[![Build Status](https://travis-ci.org/sandfoxme/vishnu.svg?branch=master)](https://travis-ci.org/sandfoxme/vishnu)
-[![Code Climate](https://codeclimate.com/github/sandfoxme/vishnu/badges/gpa.svg)](https://codeclimate.com/github/sandfoxme/vishnu)
-[![Test Coverage](https://codeclimate.com/github/sandfoxme/vishnu/badges/coverage.svg)](https://codeclimate.com/github/sandfoxme/vishnu/coverage)
-[![Dependency Status](https://gemnasium.com/sandfoxme/vishnu.svg)](https://gemnasium.com/sandfoxme/vishnu)
+[![Gem](https://img.shields.io/gem/v/vishnu.svg?maxAge=2592000)](https://rubygems.org/gems/vishnu)
+[![Travis](https://img.shields.io/travis/sandfoxme/vishnu.svg?maxAge=2592000)](https://travis-ci.org/sandfoxme/vishnu)
+[![Code Climate](https://img.shields.io/codeclimate/github/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu)
+[![Code Climate](https://img.shields.io/codeclimate/coverage/github/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu/coverage)
+[![Gemnasium](https://img.shields.io/gemnasium/sandfoxme/vishnu.svg?maxAge=2592000)](https://gemnasium.com/sandfoxme/vishnu)
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
 
