@@ -7,16 +7,16 @@
 [![Test Coverage](https://codeclimate.com/github/sandfoxme/vishnu/badges/coverage.svg)](https://codeclimate.com/github/sandfoxme/vishnu/coverage)
 [![Dependency Status](https://gemnasium.com/sandfoxme/vishnu.svg)](https://gemnasium.com/sandfoxme/vishnu)
 
-Vishnu is a simple library to use Libravatar avatars in your ruby app. 
+Vishnu is a simple library to use Libravatar avatars in your ruby app.
 
-[Libravatar](https://libravatar.org/) is an avatar service to let their 
-users associate avatar images with their emails or openids. This rubygem 
+[Libravatar](https://libravatar.org/) is an avatar service to let their
+users associate avatar images with their emails or openids. This rubygem
 generates their avatar URL.
 
 ## Installation
 
 Add the following line to your ```Gemfile```:
-    
+
 ```ruby
 gem 'vishnu'
 ```
@@ -52,7 +52,7 @@ avatar.to_s         # and old style
 # => "https://seccdn.libravatar.org/avatar/16d113840f999444259f73bac9ab8b10?s=40&d=identicon"
 
 require 'libravatar' # register an alias if you didn't add require: 'libravatar' to your Gemfile
-Libravatar.new(email: 'someone@example.com').to_s   # libravatar gem style 
+Libravatar.new(email: 'someone@example.com').to_s   # libravatar gem style
 ```
 
 ## libravatar gem compatibility
@@ -60,14 +60,20 @@ Libravatar.new(email: 'someone@example.com').to_s   # libravatar gem style
 As a fork, vishnu is mostly compatible to the [libravatar](https://rubygems.org/gems/libravatar) v1.2.0 gem.
 
 Major differences in 2.0 are:
- 
+
 *   ruby < 2.0.0 is no longer supported
 *   methods ```get_target_domain```, ```srv_lookup```, ```get_base_url```
-(basically everything except `to_s` and attribute setters / getters) 
+(basically everything except `to_s` and attribute setters / getters)
 are now private
-    
-If you for some reason depend on these features, use ```vishnu 1.2.1``` 
-which is basically a rebranded bugfix for ```libravatar 1.2.0```.
+
+If you for some reason depend on these features, use ```vishnu 1.2.x```
+which is basically a rebranded bugfix branch for ```libravatar 1.2.0```.
+
+To use this upstream based branch add the following to your ```Gemfile```:
+
+```ruby
+gem 'vishnu', '~> 1.2.1', require: 'libravatar'
+```
 
 ## License
 
