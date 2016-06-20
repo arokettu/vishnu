@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 #
 # The Vishnu class generates the avatar URL provided by the libravatar
 # web service at https://www.libravatar.org
 #
 # Users may associate their avatar images with multiple OpenIDs and Emails.
-#  
+#
 # Original Author:: Kang-min Liu (http://gugod.org/)
 # Fork Author:: Anton Smirnov (https://sandfox.me/)
 # Copyright:: Copyright (c) 2011 Kang-min Liu
