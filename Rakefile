@@ -15,7 +15,7 @@ Jeweler::Tasks.new do |gem|
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   # gem.add_runtime_dependency 'digest/sha2', '> 0.1'
   # gem.add_runtime_dependency 'uri', '> 0.1'
-  gem.add_development_dependency 'shoulda', '> 1.2.3'
+  # gem.add_development_dependency 'shoulda', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -26,16 +26,9 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-# require 'rcov/rcovtask'
-# Rcov::RcovTask.new do |test|
-#   test.libs << 'test'
-#   test.pattern = 'test/**/test_*.rb'
-#   test.verbose = true
-# end
-
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
