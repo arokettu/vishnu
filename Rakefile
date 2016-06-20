@@ -5,7 +5,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "vishnu"
-  gem.homepage = "http://github.com/sandfoxme/libravatar"
+  gem.homepage = "http://github.com/sandfoxme/vishnu"
   gem.license = "MIT"
   gem.summary = %Q{Avatar URL Generation wih libravatar.org}
   gem.description = %Q{libravatar.org provides avatar image hosting (like gravatar.com). Their users may associate avatar images with email or openid. This rubygem can be used to generate libravatar avatar image URL}
