@@ -3,4 +3,4 @@
 
 require_relative 'vishnu'
 
-class Libravatar < Vishnu; end
+Libravatar = Vishnu
