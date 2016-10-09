@@ -12,7 +12,7 @@
 # Contributors:: https://github.com/sandfoxme/vishnu/graphs/contributors
 #
 
-require_relative 'vishnu/version'
+require 'vishnu/version'
 
 require 'digest/md5'
 require 'digest/sha2'
