@@ -2,8 +2,8 @@
 
 [![Gem](https://img.shields.io/gem/v/vishnu.svg?maxAge=2592000)](https://rubygems.org/gems/vishnu)
 [![Travis](https://img.shields.io/travis/sandfoxme/vishnu.svg?maxAge=2592000)](https://travis-ci.org/sandfoxme/vishnu)
-[![Code Climate](https://img.shields.io/codeclimate/github/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu)
-[![Code Climate](https://img.shields.io/codeclimate/coverage/github/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu/coverage)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu)
+[![Code Climate](https://img.shields.io/codeclimate/c/sandfoxme/vishnu.svg?maxAge=2592000)](https://codeclimate.com/github/sandfoxme/vishnu/coverage)
 [![Gemnasium](https://img.shields.io/gemnasium/sandfoxme/vishnu.svg?maxAge=2592000)](https://gemnasium.com/sandfoxme/vishnu)
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
