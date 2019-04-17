@@ -1,6 +1,8 @@
 Vishnu
 ######
 
+|RubyGems| |GitHub| |Gitlab| |Bitbucket|
+
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
 
 Libravatar_ is an avatar service to let their users associate avatar images with their emails or openids.
@@ -20,14 +22,6 @@ Or if you want to register ``Libravatar`` alias, then:
 .. code-block:: ruby
 
     gem 'vishnu', require: 'libravatar'
-
-Official pages
-==============
-
-* https://rubygems.org/gems/vishnu
-* https://github.com/sandfoxme/vishnu
-* https://gitlab.com/sandfox/vishnu
-* https://bitbucket.org/sandfox/vishnu
 
 Usage
 =====
@@ -85,4 +79,13 @@ License
 Licensed under the MIT License. See ``LICENSE.txt`` for further details.
 
 .. _Libravatar: https://libravatar.org/
-.. _oldgem:      https://rubygems.org/gems/libravatar
+.. _oldgem:     https://rubygems.org/gems/libravatar
+
+.. |RubyGems|   image:: https://img.shields.io/gem/v/vishnu.svg
+   :target:     https://rubygems.org/gems/vishnu
+.. |GitHub|     image:: https://img.shields.io/badge/GitHub-vishnu-informational.svg?logo=github
+   :target:     https://github.com/sandfoxme/vishnu
+.. |Gitlab|     image:: https://img.shields.io/badge/Gitlab-vishnu-informational.svg?logo=gitlab
+   :target:     https://gitlab.com/sandfox/vishnu
+.. |Bitbucket|  image:: https://img.shields.io/badge/Bitbucket-vishnu-informational.svg?logo=bitbucket
+   :target:     https://bitbucket.org/sandfox/vishnu
