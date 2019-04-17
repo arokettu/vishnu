@@ -11,13 +11,13 @@ Installation
 
 Add the following line to your ``Gemfile``:
 
-.. code-block: ruby
+.. code-block:: ruby
 
     gem 'vishnu'
 
 Or if you want to register ``Libravatar`` alias, then:
 
-.. code-block: ruby
+.. code-block:: ruby
 
     gem 'vishnu', require: 'libravatar'
 
@@ -32,7 +32,7 @@ Official pages
 Usage
 =====
 
-.. code-block: ruby
+.. code-block:: ruby
 
     Vishnu.new(email:  'someone@example.com').url   # get avatar for email
     Vishnu.new(openid: 'https://example.com').url   # get avatar for OpenID URL
@@ -75,7 +75,7 @@ which is basically a rebranded bugfix branch for ``libravatar 1.2.0``.
 
 To use this upstream based branch add the following to your ``Gemfile``:
 
-.. code-block: ruby
+.. code-block:: ruby
 
     gem 'vishnu', '~> 1.2.1', require: 'libravatar'
 
