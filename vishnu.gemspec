@@ -12,7 +12,7 @@ Libravatar provides avatar image hosting (like gravatar.com).
 Their users may associate avatar images with email or openid.
 This rubygem can be used to generate Libravatar image URL
 DESC
-  spec.homepage         = 'https://github.com/sandfoxme/vishnu'
+  spec.homepage         = 'https://sandfox.dev/bencode.html'
   spec.license          = 'MIT'
 
   # put only lib/ into the gem
