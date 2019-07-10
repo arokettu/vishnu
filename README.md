@@ -33,7 +33,7 @@ Vishnu.new(openid: 'https://example.com').url   # get avatar for OpenID URL
 
 ## Documentation
 
-Read full documentation here: <https://sandfox.dev/vishnu.html>
+Read full documentation here: <https://sandfox.dev/ruby/vishnu.html>
 
 ## License
 
