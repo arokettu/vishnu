@@ -1,8 +1,8 @@
 # Vishnu
 
 [![Gem](https://img.shields.io/gem/v/vishnu.svg?maxAge=2592000)](https://rubygems.org/gems/vishnu)
-[![license](https://img.shields.io/github/license/sandfoxme/vishnu.svg)](https://opensource.org/licenses/MIT)
-[![Travis](https://img.shields.io/travis/sandfoxme/vishnu.svg?maxAge=2592000)](https://travis-ci.org/sandfoxme/vishnu)
+[![license](https://img.shields.io/github/license/arokettu/vishnu.svg)](https://opensource.org/licenses/MIT)
+[![Travis](https://img.shields.io/travis/arokettu/vishnu.svg?maxAge=2592000)](https://travis-ci.org/arokettu/vishnu)
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
 
@@ -34,6 +34,10 @@ Vishnu.new(openid: 'https://example.com').url   # get avatar for OpenID URL
 ## Documentation
 
 Read full documentation here: <https://sandfox.dev/ruby/vishnu.html>
+
+## Support
+
+Please file issues on our main repo at GitLab: <https://gitlab.com/sandfox/vishnu/-/issues>
 
 ## License
 
