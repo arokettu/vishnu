@@ -1,4 +1,4 @@
-The MIT License
+# The MIT License
 
 Copyright (c) 2016 Anton Smirnov
 
@@ -20,9 +20,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-based on the libravatar gem by Kang-min Liu, license:
+---
 
-The MIT License
+based on the libravatar gem, license:
+
+# The MIT License
 
 Copyright (c) 2011 Kang-min Liu
 
