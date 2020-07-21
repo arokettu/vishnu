@@ -90,4 +90,4 @@ Licensed under the MIT License. See ``LICENSE.txt`` for further details.
 .. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
    :target:     https://bitbucket.org/sandfox/vishnu
 .. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg
-   :target:     https://git.sandfox.dev/sandfox/vishnu
+   :target:     https://sandfox.org/sandfox/vishnu
