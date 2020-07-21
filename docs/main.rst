@@ -85,7 +85,7 @@ Licensed under the MIT License. See ``LICENSE.txt`` for further details.
    :target:     https://rubygems.org/gems/vishnu
 .. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?logo=github
    :target:     https://github.com/arokettu/vishnu
-.. |GitLab|     image:: https://img.shields.io/badge/get%20on-Gitlab-informational.svg?logo=gitlab
+.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?logo=gitlab
    :target:     https://gitlab.com/sandfox/vishnu
 .. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
    :target:     https://bitbucket.org/sandfox/vishnu
