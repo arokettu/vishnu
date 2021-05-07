@@ -14,11 +14,6 @@ cache:
     - bundle update
     - bundle exec rspec
 
-test-2.0:
-  extends: .test
-  stage: test
-  image: ruby:2.0
-
 test-2.1:
   extends: .test
   stage: test
