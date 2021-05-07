@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in vishnu.gemspec
+group :development_extra do
+  gem 'pry'
+  gem 'simplecov'
+  gem 'rubocop'
+end
+
 gemspec
