@@ -81,13 +81,13 @@ Licensed under the MIT License. See ``LICENSE.txt`` for further details.
 .. _Libravatar: https://libravatar.org/
 .. _oldgem:     https://rubygems.org/gems/libravatar
 
-.. |RubyGems|   image:: https://img.shields.io/gem/v/vishnu.svg
+.. |RubyGems|   image:: https://img.shields.io/gem/v/vishnu.svg?style=flat-square
    :target:     https://rubygems.org/gems/vishnu
-.. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?logo=github
+.. |GitHub|     image:: https://img.shields.io/badge/get%20on-GitHub-informational.svg?style=flat-square&logo=github
    :target:     https://github.com/arokettu/vishnu
-.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?logo=gitlab
+.. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?style=flat-square&logo=gitlab
    :target:     https://gitlab.com/sandfox/vishnu
-.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?logo=bitbucket
+.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?style=flat-square&logo=bitbucket
    :target:     https://bitbucket.org/sandfox/vishnu
-.. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg
+.. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg?style=flat-square&logo=gitea
    :target:     https://sandfox.org/sandfox/vishnu
