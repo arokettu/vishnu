@@ -1,5 +1,4 @@
-# do not check coverage on JRuby
-unless RUBY_PLATFORM == 'java'
+if ENV['COVERAGE'] == '1'
   require 'simplecov'
   SimpleCov.start
 end
