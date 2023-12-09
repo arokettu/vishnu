@@ -1,6 +1,7 @@
 # bundler
-.bundle
-Gemfile.lock
+/.bundle
+/Gemfile.lock
+/vendor
 
 # ide
 /.vscode
