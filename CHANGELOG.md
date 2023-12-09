@@ -1,6 +1,12 @@
 # Changelog
 
-## 2.0.0
+## 2.x
+
+### 2.0.0
+
+*26 Mar, 2016*
+
+Forked from 1.2.0 of the Libravatar gem
 
 Mostly refactoring
 - use `url` method as primary way to get avatar url instead of `to_s`
@@ -10,11 +16,17 @@ Mostly refactoring
 - change test system from shoulda to rspec
 - add travis builds for all minor ruby versions
 
-## 1.2.2
+## 1.x
+
+### 1.2.2
+
+*20 Jun, 2016*
 
 Merged development dependencies from upstream
 
-## 1.2.1
+### 1.2.1
+
+*25 Mar, 2016*
 
 bugfix release for libravatar 1.2.0
 - fix weighted random on federated avatars
