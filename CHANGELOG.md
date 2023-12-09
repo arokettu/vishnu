@@ -2,6 +2,12 @@
 
 ## 2.x
 
+### 2.0.1
+
+*Dec 9, 2023*
+
+* Re-release 2.0.0 with updated homepage and email
+
 ### 2.0.0
 
 *26 Mar, 2016*
