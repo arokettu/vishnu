@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version          = Vishnu::VERSION
 
   spec.authors          = ['Anton Smirnov', 'Kang-min Liu']
-  spec.email            = 'sandfox@sandfox.me'
+  spec.email            = 'sandfox+gem@sandfox.me'
   spec.summary          = 'Avatar URL Generation with libravatar.org'
   spec.description      = <<DESC
 Libravatar provides avatar image hosting (like gravatar.com).
