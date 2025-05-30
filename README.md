@@ -1,6 +1,6 @@
 # Vishnu
 
-[![Gem](https://img.shields.io/gem/v/vishnu.svg?style=flat-square)](https://rubygems.org/gems/commonmarker-rouge)
+[![Gem](https://img.shields.io/gem/v/vishnu.svg?style=flat-square)](https://rubygems.org/gems/vishnu)
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/sandfox/vishnu/master.svg?style=flat-square)](https://gitlab.com/sandfox/vishnu/-/pipelines)
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
