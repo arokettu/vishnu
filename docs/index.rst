@@ -1,7 +1,7 @@
 Vishnu
 ######
 
-|RubyGems| |GitLab| |GitHub| |Bitbucket| |Gitea|
+|RubyGems| |GitLab| |GitHub| |Codeberg| |Gitea|
 
 Vishnu is a simple library to use Libravatar avatars in your ruby app.
 
@@ -87,7 +87,7 @@ Licensed under the MIT License. See ``LICENSE.txt`` for further details.
    :target:     https://github.com/arokettu/vishnu
 .. |GitLab|     image:: https://img.shields.io/badge/get%20on-GitLab-informational.svg?style=flat-square&logo=gitlab
    :target:     https://gitlab.com/sandfox/vishnu
-.. |Bitbucket|  image:: https://img.shields.io/badge/get%20on-Bitbucket-informational.svg?style=flat-square&logo=bitbucket
-   :target:     https://bitbucket.org/sandfox/vishnu
+.. |Codeberg|   image:: https://img.shields.io/badge/get%20on-Codeberg-informational.svg?style=flat-square&logo=codeberg
+   :target:     https://codeberg.org/sandfox/vishnu
 .. |Gitea|      image:: https://img.shields.io/badge/get%20on-Gitea-informational.svg?style=flat-square&logo=gitea
    :target:     https://sandfox.org/sandfox/vishnu
